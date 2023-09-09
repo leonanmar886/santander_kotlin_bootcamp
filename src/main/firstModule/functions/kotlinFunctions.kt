@@ -11,6 +11,7 @@ fun main(){
     val x = 2
     val y = 3
     println("$x + $y = ${x + y}") // string interpolation
+    printAllWithPrefix("Kotlin", "Java", "Scala", "C", prefix = "Language:") // named arguments
 }
 
 fun printMessageWithPrefix(message: String, prefix: String = "Info:"){// the prefix argument has a default value
@@ -25,4 +26,8 @@ fun multiply(x: Int, y: Int) = x * y // kotlin functions syntax don't need the b
 
 fun printAll(vararg messages: String){ // vararg is used to pass a variable number of arguments
     for (m in messages) println(m) // for loop that executes a inlined function
+}
+
+fun printAllWithPrefix(vararg messages: String, prefix: String){
+    for (m in messages) println(prefix + m)
 }
